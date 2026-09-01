@@ -8,8 +8,10 @@ jobs:
         uses: actions/checkout@v3
       - name: Install dependencies
         run: npm ci
+        working-directory: ./o4 PRACTICE PROJECT
       - name: Lint
         run: npm run Lint
+        working-directory: ./o4 PRACTICE PROJECT
   test:
     runs-on: ubuntu-latest
     steps:
@@ -17,8 +19,10 @@ jobs:
         uses: actions/checkout@v3
       - name: Install dependencies
         run: npm ci
+        working-directory: ./o4 PRACTICE PROJECT
       - name: Test code
         run: npm run test
+        working-directory: ./o4 PRACTICE PROJECT
   deploy:
     runs-on: ubuntu-latest
     steps:
@@ -26,7 +30,9 @@ jobs:
         uses: actions/checkout@v3
       - name: Install dependencies
         run: npm ci
+        working-directory: ./o4 PRACTICE PROJECT
       - name: Build code
         run: npm run Build
+        working-directory: ./o4 PRACTICE PROJECT
       - name: Deploy code
         run: echo "Deploying ..."
